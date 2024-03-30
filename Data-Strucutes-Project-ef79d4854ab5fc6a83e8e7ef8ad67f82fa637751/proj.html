@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Queue Operations</title>
+  <script src="projfor.js"></script>
+  <link rel="stylesheet" href="projfor.css" />
+  <style>
+    .array-box {
+      display: inline-block;
+      padding: 5px;
+      border: 1px solid black;
+      margin: 5px;
+    }
+  </style>
+  <script src="nalan.js" defer></script>
+</head>
+<body>
+  
+  <form id="queueForm">
+    <div class="full">
+        <h1>OVERFlLOW DUAL QUEUE</h1>
+        <div class="in">
+            <label for="limit">Enter the limit:</label>
+            <input type="number" id="limit" class="nk" required >
+        </div>
+        <div class="in">
+            <label for="value">Enter a value:</label>
+            <input type="number" id="value" class="nk">
+        </div>
+        <div class="buttons">
+            <button type="button" class="operation-btn" id="enqueueBtn" >Enqueue</button>
+            <button type="button" class="operation-btn" id="dequeueBtn" >Dequeue</button>
+            <button type="button" class="operation-btn" id="exitBtn" >Clear</button>
+        </div>
+    </div>
+  </form>
+  
+  <div id="resultContainer" style="text-align: center;"></div>
+</body>
+</html>

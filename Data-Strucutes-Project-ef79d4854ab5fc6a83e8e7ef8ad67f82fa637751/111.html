@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Overflow Double-Ended Queue</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Overflow Double-Ended Queue</h1>
+  <input type="text" id="inputValue" placeholder="Enter a value" />
+  <button onclick="insertFront()">Insert Front</button>
+  <button onclick="insertRear()">Insert Rear</button>
+  <button onclick="deleteFront()">Delete Front</button>
+  <button onclick="deleteRear()">Delete Rear</button>
+  <ul id="deque"></ul>
+
+  <script>
+    var deque = [];
+
+    function insertFront() {
+      var value = document.getElementById("inputValue").value;
+      deque.unshift(value);
+      displayDeque();
+    }
+
+    function insertRear() {
+      var value = document.getElementById("inputValue").value;
+      deque.push(value);
+      displayDeque();
+    }
+
+    function deleteFront() {
+      deque.shift();
+      displayDeque();
+    }
+
+    function deleteRear() {
+      deque.pop();
+      displayDeque();
+    }
+
+    function displayDeque() {
+      var dequeElement = document.getElementById("deque");
+      dequeElement.innerHTML = "";
+      deque.forEach(function (element) {
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(element));
+        dequeElement.appendChild(li);
+      });
+      document.getElementById("inputValue").value = "";
+    }
+  </script>
+</body>
+</html>

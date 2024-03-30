@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Queue Operations</title>
+  <link rel="stylesheet" href="final.css">
+  <style>
+    .array-box {
+      display: inline-block;
+      padding: 5px;
+      border: 1px solid black;
+      margin: 5px;
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <form id="queueForm">
+    <div class="full">
+        <h1>OVERFLOW DUAL QUEUE</h1>
+        <div class="in">
+            <label for="limit">Enter the limit:</label>
+            <input type="number" id="limit" class="nk" required><br><br>    
+        </div>
+        <div>
+            <label for="value">Enter a value:</label>
+            <input type="number" id="value" class="nk"><br><br>
+        </div>
+
+        <div class="buttons">
+        <button type="button" class="operation-btn" id="enqueueBtn">Enqueue</button>
+        <button type="button" class="operation-btn" id="dequeueBtn">Dequeue</button>
+        <button type="button" class="operation-btn" id="clearBtn">Clear</button>
+        </div>
+    </div>
+    
+  </form>
+  
+  <div id="resultContainer" style="text-align: center;"></div>
+</body>
+</html>
